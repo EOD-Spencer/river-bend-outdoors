@@ -92,3 +92,40 @@ footer{border-top:1px solid var(--stroke);padding:27px 0;color:var(--muted);font
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}.button{transition:none}
 }
+
+/* Homepage polish preview (#10): approved midnight navy/gold palette. */
+.brand{gap:12px}
+.brand img{width:75px;height:60px;object-fit:contain;flex:none}
+.brand-lockup{display:flex;flex-direction:column;gap:3px;line-height:1;white-space:nowrap}
+.brand-lockup strong{font-family:Georgia,"Times New Roman",serif;color:var(--text);
+  font-size:1.32rem;font-weight:750;letter-spacing:.035em;text-transform:uppercase}
+.brand-lockup>span{font-size:.75rem;letter-spacing:.27em;font-weight:750;color:var(--gold);text-transform:uppercase}
+.brand:hover .brand-lockup strong{color:var(--gold)}
+.hero{isolation:isolate;background:linear-gradient(120deg,#050728 20%,#0f1940 66%,#050728)}
+.hero-visual{position:absolute;top:0;right:0;bottom:0;width:65%;z-index:-1;opacity:.62}
+.hero-visual img{width:100%;height:100%;display:block;object-fit:cover;object-position:center 56%}
+.hero-visual:after{content:"";position:absolute;inset:0;pointer-events:none;
+ background:linear-gradient(90deg,#050728 0%,rgba(5,7,40,.78) 24%,rgba(5,7,40,.3) 82%),
+            linear-gradient(0deg,rgba(5,7,40,.72),transparent 55%)}
+.hero:before{z-index:0;opacity:.065}
+.hero-inner{position:relative;z-index:1;min-height:460px;
+ display:flex;flex-direction:column;align-items:flex-start;justify-content:center;padding:68px 0 84px}
+.hero-inner>p:not(.overline){max-width:580px}
+.hero-inner .button{margin-top:22px}
+.section-heading{margin-bottom:24px}
+.article-card{display:flex;flex-direction:column}
+.article-card .card-copy{flex:1;padding:22px 22px 26px}
+.article-card .card-copy h3{font-size:1.4rem;line-height:1.21}
+.article-card .card-copy>p:last-child{display:-webkit-box;-webkit-box-orient:vertical;
+ -webkit-line-clamp:5;overflow:hidden}
+.values{margin-top:8px}
+@media(max-width:610px){
+ .brand{gap:9px}
+ .brand img{width:60px;height:48px}
+ .brand-lockup strong{font-size:1.08rem}
+ .brand-lockup>span{font-size:.62rem}
+ .hero-visual{width:100%;opacity:.5}
+ .hero-visual:after{background:linear-gradient(90deg,rgba(5,7,40,.95),rgba(5,7,40,.61)),
+   linear-gradient(0deg,rgba(5,7,40,.85),transparent 70%)}
+ .hero-inner{min-height:430px;padding:64px 0 72px}
+}
