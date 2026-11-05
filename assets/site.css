@@ -148,3 +148,16 @@ footer{border-top:1px solid var(--stroke);padding:27px 0;color:var(--muted);font
     box-sizing:border-box;width:100%;min-height:48px;padding:12px 16px;text-align:center}
   .library-group{margin-top:38px}
 }
+
+/* Keep the first article visible on phone-height entry to the Articles page. */
+@media(max-width:610px){
+  .library.section{padding-top:18px}
+  .library>.overline{margin:0 0 6px;font-size:.7rem}
+  .library>h1{font-size:2.1rem;line-height:1.1;margin:0 0 10px}
+  .library>.intro{font-size:1rem;line-height:1.4;margin:0 0 15px}
+  .library-jump{gap:8px;margin:0 0 13px}
+  .library-jump a{min-height:44px;padding:8px 12px;font-size:.9rem}
+  .library-group{margin-top:16px}
+  .library-group h2{font-size:1.8rem;line-height:1.15;margin:0 0 3px}
+  .library-group-intro{font-size:.95rem;line-height:1.4;margin:0 0 12px}
+}
