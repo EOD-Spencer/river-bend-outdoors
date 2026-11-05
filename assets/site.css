@@ -72,6 +72,9 @@ h3{font-size:1.4rem;letter-spacing:-.01em}
 .article-body figure{margin:34px 0}
 .article-body blockquote{border-left:3px solid var(--gold);padding-left:22px;margin:28px 0;color:var(--muted)}
 .article-body li{margin-bottom:6px}
+/* Long citation URLs and enlarged headings must reflow within phone widths. */
+.article-body a{overflow-wrap:anywhere}
+h1,h2,h3{overflow-wrap:anywhere}
 .back{margin-top:50px;border-top:1px solid var(--stroke);padding-top:24px}
 footer{border-top:1px solid var(--stroke);padding:27px 0;color:var(--muted);font-size:.85rem;background:#040621}
 .footer-inner{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
