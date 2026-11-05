@@ -1,0 +1,22 @@
+{
+  "name": "River Bend",
+  "short_name": "River Bend",
+  "description": "Outdoor stories, firsthand guides, and reflections on family life.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#050728",
+  "theme_color": "#050728",
+  "icons": [
+    {
+      "src": "/assets/brand/home-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/brand/home-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
