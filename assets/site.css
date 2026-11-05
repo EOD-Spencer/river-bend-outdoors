@@ -102,7 +102,7 @@ footer{border-top:1px solid var(--stroke);padding:27px 0;color:var(--muted);font
 .brand-lockup>span{font-size:.75rem;letter-spacing:.27em;font-weight:750;color:var(--gold);text-transform:uppercase}
 .brand:hover .brand-lockup strong{color:var(--gold)}
 .hero{isolation:isolate;background:linear-gradient(120deg,#050728 20%,#0f1940 66%,#050728)}
-.hero-visual{position:absolute;top:0;right:0;bottom:0;width:65%;z-index:-1;opacity:.62}
+.hero-visual{position:absolute;top:0;right:0;bottom:0;width:65%;z-index:-1;opacity:.78}
 .hero-visual img{width:100%;height:100%;display:block;object-fit:cover;object-position:center 56%}
 .hero-visual:after{content:"";position:absolute;inset:0;pointer-events:none;
  background:linear-gradient(90deg,#050728 0%,rgba(5,7,40,.78) 24%,rgba(5,7,40,.3) 82%),
@@ -124,9 +124,9 @@ footer{border-top:1px solid var(--stroke);padding:27px 0;color:var(--muted);font
  .brand img{width:60px;height:48px}
  .brand-lockup strong{font-size:1.08rem}
  .brand-lockup>span{font-size:.62rem}
- .hero-visual{width:100%;opacity:.5}
- .hero-visual:after{background:linear-gradient(90deg,rgba(5,7,40,.95),rgba(5,7,40,.61)),
-   linear-gradient(0deg,rgba(5,7,40,.85),transparent 70%)}
+ .hero-visual{width:100%;opacity:.9}
+ .hero-visual:after{background:linear-gradient(90deg,rgba(5,7,40,.83),rgba(5,7,40,.35)),
+   linear-gradient(0deg,rgba(5,7,40,.55),transparent 68%)}
  .hero-inner{min-height:430px;padding:64px 0 72px}
 }
 
