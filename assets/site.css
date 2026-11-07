@@ -332,3 +332,18 @@ footer a{color:var(--gold);text-underline-offset:3px}
 
 /* Accessible visible byline matches article author in structured data. */
 .post-author{margin:-8px 0 16px;color:var(--muted);font-size:.95rem;font-weight:600}
+
+
+
+/* Accessible, static GitHub Pages fallback for outdated or mistyped URLs. */
+.not-found{min-height:55vh;padding-top:clamp(68px,9vw,112px);
+ padding-bottom:clamp(76px,10vw,128px)}
+.not-found h1{max-width:16ch}
+.not-found>.intro{max-width:660px}
+.not-found-actions{display:flex;flex-wrap:wrap;gap:20px;align-items:center}
+.not-found-actions .button{margin-top:0}
+.not-found-actions .text-link{display:inline-flex;align-items:center;min-height:44px}
+@media(max-width:380px){
+ .not-found{padding-top:52px;padding-bottom:74px}
+ .not-found-actions{align-items:flex-start;flex-direction:column;gap:16px}
+}
