@@ -55,6 +55,11 @@ h3{font-size:1.4rem;letter-spacing:-.01em}
 .placeholder:after{content:"";position:absolute;inset:0;opacity:.15;background:repeating-radial-gradient(ellipse at 100% 100%,transparent 0 20px,var(--gold) 21px 22px,transparent 23px 45px)}
 .card-copy{padding:19px 21px 24px}
 .card-copy .eyebrow{font-size:.71rem;margin:0 0 9px}
+.card-copy .eyebrow a,.post>.overline a{color:inherit;text-decoration:underline;
+ text-decoration-color:rgba(238,206,122,.55);text-underline-offset:3px}
+.card-copy .eyebrow a:hover,.post>.overline a:hover{color:var(--gold)}
+.category-archive>.intro{margin-bottom:12px}
+.category-archive>.cards{margin-top:24px}
 .card-copy time{letter-spacing:0;text-transform:none;color:var(--muted);font-weight:450}
 .card-copy h3{margin:0 0 10px}
 .card-copy h3 a{text-decoration:none}
