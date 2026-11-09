@@ -378,3 +378,21 @@ footer a{color:var(--gold);text-underline-offset:3px}
 .rbo-location-map-list .rbo-location-map-detail { flex-basis:100%; width:100%; margin:0 0 .5rem; }
 .rbo-location-map-list button[aria-expanded="true"] { border-color:var(--gold); box-shadow:0 0 0 1px var(--gold); }
 @media(max-width:600px){.rbo-location-map-list .rbo-location-map-detail { grid-column:1/-1; }}
+
+
+/* iOS Safari: prevent text auto-enlargement and scroll-anchor jumps when
+   the Darrow location description expands while the map changes zoom. */
+.rbo-map-page .rbo-location-map-list {
+  -webkit-text-size-adjust:100%;
+  text-size-adjust:100%;
+  overflow-anchor:none;
+}
+.rbo-map-page .rbo-location-map-detail {
+  font-size:1rem;
+  line-height:1.5;
+  overflow-wrap:break-word;
+}
+.rbo-map-page .rbo-location-map-detail h3 { font-size:1.25rem; }
+@media(prefers-reduced-motion:reduce) {
+  .rbo-map-page .rbo-location-map-detail { scroll-behavior:auto; }
+}
