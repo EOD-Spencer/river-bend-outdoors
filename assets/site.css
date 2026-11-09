@@ -477,3 +477,51 @@ footer a{color:var(--gold);text-underline-offset:3px}
 .rbo-darrow-guide .rbo-location-map-detail h3{color:#fff}
 .rbo-darrow-guide .rbo-location-map-detail a{color:#f5c967}
 @media(max-width:600px){.rbo-darrow-guide{padding-top:1.1rem}.rbo-darrow-guide .rbo-guide-intro{margin-bottom:1rem}.rbo-darrow-guide .rbo-location-map-canvas{height:58vh;min-height:380px}.rbo-darrow-guide .rbo-location-map-list{display:block}.rbo-darrow-guide .rbo-location-map-list button{width:100%}.rbo-darrow-guide .rbo-location-map-detail{margin-top:.6rem}}
+
+
+/* Source-layer controls and compact color key on the Darrow map. */
+.rbo-research-controls{display:flex;flex-wrap:wrap;gap:10px;margin:12px 0}
+.rbo-research-controls button{
+  min-height:44px;cursor:pointer;border:1px solid #dbb975;background:#153449;
+  color:#fdf6e7;font:inherit;font-weight:700;padding:8px 13px;border-radius:8px
+}
+.rbo-research-controls button:hover{background:#21506a}
+.rbo-research-controls button:focus-visible{
+  outline:3px solid #f5ce78;outline-offset:3px
+}
+.rbo-research-sources{
+  margin:8px 0 15px;padding:10px 15px;border:1px solid #486478;
+  border-radius:9px;background:#10253d;font-size:.9rem;line-height:1.55
+}
+.rbo-research-sources summary{cursor:pointer;color:#f5ce78;font-weight:700}
+.rbo-research-sources p{margin:10px 0}
+.rbo-research-sources a{color:#f5ce78;text-decoration:underline;text-underline-offset:3px}
+@media(max-width:500px){
+  .rbo-research-controls{display:grid;grid-template-columns:1fr 1fr}
+  .rbo-research-controls button{font-size:.82rem;padding:7px}
+}
+
+/* Map line key: one OSM layer color, with per-way sources still accessible. */
+.rbo-research-legend{
+  margin:8px 0 15px;padding:10px 15px;border:1px solid #496479;
+  border-radius:9px;background:#10253d;line-height:1.5;font-size:.9rem
+}
+.rbo-research-legend summary{cursor:pointer;font-weight:700;color:#f5ce78}
+.rbo-research-legend p{margin:9px 0}
+.rbo-research-legend ul{padding:0;margin:10px 0 0;list-style:none;columns:2;column-gap:22px}
+.rbo-research-legend li{break-inside:avoid;margin:5px 0;overflow-wrap:anywhere}
+.rbo-research-legend a{color:#f5ce78}
+.rbo-research-legend li>span:last-child{color:#c5ced6}
+.rbo-research-line-swatch{
+  display:inline-block;vertical-align:middle;width:25px;flex:none;
+  height:0;border-top:4px dashed var(--rbo-line-color);
+  margin:0 6px 3px 0
+}
+@media(max-width:550px){
+  .rbo-research-legend ul{columns:1}
+}
+
+.rbo-research-way-list{margin-top:12px;border-top:1px solid #36566b;padding-top:10px}
+.rbo-research-way-list summary{font-weight:600;font-size:.88rem}
+.rbo-research-way-list ul{columns:2}
+@media(max-width:550px){.rbo-research-way-list ul{columns:1}}
