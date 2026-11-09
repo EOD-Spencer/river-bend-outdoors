@@ -374,3 +374,7 @@ footer a{color:var(--gold);text-underline-offset:3px}
 .rbo-map-page .rbo-map-caution summary { cursor:pointer; font-weight:600; }
 .rbo-map-page .rbo-location-map-list { margin-top:10px; }
 .rbo-location-map-detail[hidden] { display:none!important; }
+
+.rbo-location-map-list .rbo-location-map-detail { flex-basis:100%; width:100%; margin:0 0 .5rem; }
+.rbo-location-map-list button[aria-expanded="true"] { border-color:var(--gold); box-shadow:0 0 0 1px var(--gold); }
+@media(max-width:600px){.rbo-location-map-list .rbo-location-map-detail { grid-column:1/-1; }}
