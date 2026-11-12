@@ -220,7 +220,7 @@ footer{border-top:1px solid var(--stroke);padding:27px 0;color:var(--muted);font
 .values h2{margin:0;max-width:13ch;color:var(--gold);
   font-size:clamp(2rem,3.4vw,3.1rem);line-height:1.12}
 .values p{color:#e6e3de;max-width:680px;font-size:1.12rem;line-height:1.65;margin:0}
-.footer-inner{justify-content:center;text-align:center}
+.footer-inner{flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:8px}
 @media(max-width:610px){
   .hero-inner{min-height:0;padding:48px 0 55px}
   .hero h1{font-size:clamp(2.55rem,10vw,3.15rem);line-height:1.07;margin-bottom:16px}
@@ -237,73 +237,34 @@ footer{border-top:1px solid var(--stroke);padding:27px 0;color:var(--muted);font
   .values p{font-size:1.03rem;line-height:1.65;margin:16px 0 0}
 }
 
-/* About page visual rhythm (#102): distinct chapters without changing editorial copy. */
+/* Minimal About page (#244): one editorial column, no decorative cards or numbering. */
 .about-page{overflow:hidden}
-.about-intro{
-  position:relative;isolation:isolate;overflow:hidden;border-bottom:1px solid var(--stroke);
-  background:radial-gradient(ellipse at 92% 14%,#172348 0%,transparent 47%),
-             linear-gradient(130deg,#10183b 0%,#080e2d 62%,#050728 100%);
-}
-.about-intro:after{
-  content:"";position:absolute;z-index:-1;right:-160px;bottom:-300px;
-  width:600px;height:600px;border:1px solid rgba(238,206,122,.11);border-radius:50%;
-  box-shadow:0 0 0 75px rgba(238,206,122,.018),0 0 0 158px rgba(238,206,122,.012);
-  pointer-events:none;
-}
-.about-intro-inner{padding:76px 0 84px}
-.about-intro .overline{margin:0 0 15px;letter-spacing:.18em}
-.about-intro h1{
-  max-width:17ch;
-  margin:0 0 26px;text-wrap:balance;
-}
+.about-intro{border-bottom:1px solid var(--stroke)}
+.about-intro-inner{max-width:780px;padding:52px 0 30px}
+.about-intro .overline{margin:0 0 12px}
+.about-intro h1{margin:0 0 22px;text-wrap:balance}
 .about-intro p:not(.overline){
-  max-width:740px;color:#e7e5e5;font-size:1.14rem;line-height:1.75;margin:0 0 16px;
+  color:#e7e5e5;font-size:1.1rem;line-height:1.75;margin:0 0 15px;
 }
-.about-intro p:last-child{
-  max-width:695px;margin:25px 0 0;padding-left:20px;
-  border-left:3px solid var(--gold);color:var(--gold);
-}
-.about-story{display:grid;gap:22px;padding-top:56px;padding-bottom:82px}
-.about-chapter{
-  position:relative;min-width:0;display:grid;
-  grid-template-columns:minmax(0,.8fr) minmax(0,1.25fr);
-  gap:clamp(22px,5vw,65px);padding:clamp(30px,4.5vw,52px);
-  background:linear-gradient(120deg,#10183a 0%,#0a1130 72%,#090e2b 100%);
-  border:1px solid rgba(238,206,122,.18);border-radius:12px;
-  box-shadow:0 14px 34px rgba(0,0,0,.09);
-}
-.about-chapter:before{
-  content:"";position:absolute;top:29px;bottom:29px;left:0;width:3px;
-  background:linear-gradient(var(--gold),rgba(238,206,122,.18));border-radius:0 2px 2px 0;
-}
-.about-chapter-number{display:block;color:var(--gold);font-size:.78rem;letter-spacing:.18em;font-weight:800}
+.about-intro p:last-child{color:var(--muted);margin-top:14px}
+.about-story{max-width:780px;padding-top:0;padding-bottom:0}
+.about-chapter{padding:28px 0 30px;border-bottom:1px solid var(--stroke)}
 .about-chapter h2{
-  font-size:clamp(2.05rem,3.1vw,2.7rem);line-height:1.13;
-  letter-spacing:-.025em;margin:12px 0 0;text-wrap:balance;
+  font-size:clamp(1.65rem,3vw,2.05rem);line-height:1.18;
+  letter-spacing:-.02em;margin:0 0 14px;
 }
-.about-chapter-body{min-width:0}
 .about-chapter-body p{
-  margin:0 0 18px;color:#e2e1e6;font-size:1.08rem;line-height:1.75;
+  color:#e2e1e6;line-height:1.75;font-size:1.04rem;margin:0 0 16px;
 }
 .about-chapter-body p:last-child{margin-bottom:0}
-.about-chapter--heritage{
-  background:radial-gradient(ellipse at 90% 0%,rgba(238,206,122,.1),transparent 56%),
-             linear-gradient(120deg,#172043,#0c1534 85%);
-  border-color:rgba(238,206,122,.38);
-}
 .about-chapter--heritage h2{color:var(--gold)}
 @media(max-width:760px){
-  .about-intro-inner{padding:52px 0 57px}
-  .about-intro h1{margin-bottom:20px}
-  .about-intro p:not(.overline){font-size:1.05rem;line-height:1.7}
-  .about-story{gap:18px;padding-top:30px;padding-bottom:52px}
-  .about-chapter{grid-template-columns:1fr;gap:19px;padding:28px 26px 30px}
-  .about-chapter:before{top:27px;bottom:27px}
-  .about-chapter h2{font-size:clamp(1.95rem,7vw,2.35rem);margin-top:7px}
-  .about-chapter-body p{font-size:1.03rem;line-height:1.7}
-}
-@media(max-width:360px){
-  .about-chapter{padding:24px 21px 27px}
+  .about-intro-inner{padding:39px 0 22px}
+  .about-intro h1{margin-bottom:17px}
+  .about-intro p:not(.overline){font-size:1.04rem;line-height:1.7}
+  .about-chapter{padding:25px 0 27px}
+  .about-chapter h2{font-size:1.65rem}
+  .about-chapter-body p{font-size:1rem;line-height:1.7}
 }
 
 /* Reader contact and private sharing (#84): no social widgets or trackers. */
@@ -325,7 +286,7 @@ footer a{color:var(--gold);text-underline-offset:3px}
 }
 
 /* About contact invitation follows (not replaces) the approved 3-chapter story. */
-.about-contact{padding:20px 0 75px;max-width:800px}
+.about-contact{padding:25px 0 65px;max-width:780px}
 .about-contact h2{font-size:clamp(1.7rem,4vw,2.15rem);margin:0 0 14px}
 .about-contact p{line-height:1.7;margin:0 0 13px}
 .about-contact a{color:var(--gold);text-underline-offset:3px;overflow-wrap:anywhere}
@@ -404,7 +365,7 @@ footer a{color:var(--gold);text-underline-offset:3px}
 .rbo-map-feature h2 a{text-decoration:none}
 .rbo-map-feature h2 a:hover{color:var(--gold)}
 .rbo-map-feature-summary{color:var(--muted);font-size:1.07rem;line-height:1.56;
-  max-width:540px;margin:0 0 19px}
+  max-width:540px;margin:0 0 7px}
 .rbo-map-feature-status{color:#d6dce4;font-size:.82rem;margin:0 0 17px}
 .rbo-map-feature-status:before{content:"";display:inline-block;vertical-align:middle;width:7px;height:7px;
   margin-right:9px;border-radius:50%;background:var(--gold)}
@@ -458,25 +419,63 @@ footer a{color:var(--gold);text-underline-offset:3px}
 .rbo-map-feature-visual .rbo-map-art-caption{top:14px;bottom:auto;z-index:6}
 @media(max-width:760px){.rbo-map-preview{min-height:225px}}
 @media(prefers-reduced-motion:reduce){.rbo-map-preview-fallback{transition:none}}
-/* Darrow Pond editorial field-guide presentation. Scoped to avoid affecting other maps. */
-.rbo-darrow-guide{max-width:1100px}
-.rbo-darrow-guide>.overline{letter-spacing:.16em;color:var(--gold);font-size:.76rem;font-weight:750;margin-bottom:.4rem}
-.rbo-darrow-guide>h1{margin:.15rem 0 .55rem;letter-spacing:-.035em;line-height:1.05}
-.rbo-darrow-guide .rbo-guide-intro{max-width:54ch;font-size:clamp(1rem,2vw,1.18rem);line-height:1.55;color:#d9e6e9;margin:.7rem 0 1.35rem}
-.rbo-darrow-guide .rbo-location-map{margin:1.2rem 0 2rem}
-.rbo-darrow-guide .rbo-map-caution{border:1px solid #496479;border-left:3px solid var(--gold);border-radius:10px;background:#102b40;padding:.2rem .9rem;margin:0 0 1rem;opacity:1}
-.rbo-darrow-guide .rbo-map-caution summary{min-height:44px;display:list-item;align-content:center;color:#f4e5bd;font-weight:700}
-.rbo-darrow-guide .rbo-map-caution p{max-width:74ch;line-height:1.65;color:#e1ebef}
-.rbo-darrow-guide .rbo-location-map-canvas{border:2px solid #597387;border-radius:14px;box-shadow:0 12px 28px #0003;overflow:hidden}
-.rbo-darrow-guide .rbo-location-map-list{gap:.7rem;margin:1rem 0}
-.rbo-darrow-guide .rbo-location-map-list button{display:flex;align-items:center;gap:.7rem;width:min(100%,420px);background:#15364d;color:#f6fafb;border:1px solid #53728a;border-radius:11px;padding:.85rem 1rem;font-weight:650;box-shadow:0 3px 10px #0002}
-.rbo-darrow-guide .rbo-site-dot{display:inline-block;width:13px;height:13px;border-radius:50%;background:#f5c967;border:2px solid #fff2c6;flex:none}
-.rbo-darrow-guide .rbo-site-chevron{margin-left:auto;color:#f5c967;font-size:1.3rem;line-height:1}
-.rbo-darrow-guide .rbo-location-map-list button[aria-expanded=true] .rbo-site-chevron{transform:rotate(180deg)}
-.rbo-darrow-guide .rbo-location-map-detail{background:#15364d;color:#f1f7f8;border:1px solid #55768b;border-left:3px solid var(--gold);border-radius:10px;padding:1.1rem 1.2rem}
-.rbo-darrow-guide .rbo-location-map-detail h3{color:#fff}
-.rbo-darrow-guide .rbo-location-map-detail a{color:#f5c967}
-@media(max-width:600px){.rbo-darrow-guide{padding-top:1.1rem}.rbo-darrow-guide .rbo-guide-intro{margin-bottom:1rem}.rbo-darrow-guide .rbo-location-map-canvas{height:58vh;min-height:380px}.rbo-darrow-guide .rbo-location-map-list{display:block}.rbo-darrow-guide .rbo-location-map-list button{width:100%}.rbo-darrow-guide .rbo-location-map-detail{margin-top:.6rem}}
+/* One shared map presentation. Darrow Pond is the reference; every location inherits updates. */
+.rbo-map-page{max-width:1100px}
+.rbo-map-page>.overline{letter-spacing:.16em;color:var(--gold);font-size:.76rem;font-weight:750;margin-bottom:.4rem}
+.rbo-map-page>h1{margin:.15rem 0 .55rem;letter-spacing:-.035em;line-height:1.05}
+.rbo-map-page .rbo-guide-intro{max-width:54ch;font-size:clamp(1rem,2vw,1.18rem);line-height:1.55;color:#d9e6e9;margin:.7rem 0 1.35rem}
+.rbo-location-map{margin:1.2rem 0 2rem}
+.rbo-map-context{display:flex;flex-wrap:wrap;gap:6px 20px;margin:0 0 11px;
+  padding:10px 14px;border:1px solid #486478;border-radius:9px;
+  background:#10253d;color:#e0e9ed;font-size:.84rem;line-height:1.45}
+.rbo-map-context p{margin:0}
+.rbo-map-context strong{color:#f5ce78}
+.rbo-map-navigation{display:flex;flex-wrap:wrap;margin:12px 0}
+.rbo-map-navigation button{min-height:44px;cursor:pointer;border:1px solid #dbb975;
+  background:#153449;color:#fdf6e7;font:inherit;font-weight:700;padding:8px 13px;
+  border-radius:8px}
+.rbo-map-navigation button:hover{background:#21506a}
+.rbo-map-navigation button:focus-visible{outline:3px solid #f5ce78;outline-offset:3px}
+.rbo-location-map .rbo-map-caution{border:1px solid #496479;border-left:3px solid var(--gold);border-radius:10px;background:#102b40;padding:.2rem .9rem;margin:0 0 1rem;opacity:1}
+.rbo-location-map .rbo-map-caution summary{min-height:44px;display:list-item;align-content:center;color:#f4e5bd;font-weight:700}
+.rbo-location-map .rbo-map-caution p{max-width:74ch;line-height:1.65;color:#e1ebef}
+.rbo-location-map-canvas{border:2px solid #597387;border-radius:14px;box-shadow:0 12px 28px #0003;overflow:hidden}
+/* One wrapping bottom credit strip; the distance scale moves under top-left zoom.
+   Preserve complete Leaflet/imagery attribution in narrow Safari and print exports. */
+.rbo-location-map-canvas .leaflet-bottom.leaflet-right{left:0;right:0}
+.rbo-location-map-canvas.leaflet-container .leaflet-control-attribution{
+  box-sizing:border-box;float:none;width:100%;max-width:100%;margin:0;
+  padding:5px 8px;background:rgba(255,255,255,.94);color:#172b34;
+  font-size:11px;line-height:1.35;white-space:normal;overflow-wrap:anywhere;
+  text-align:right
+}
+.rbo-location-map-canvas.leaflet-container .leaflet-control-attribution a{color:#134b71;text-decoration:underline}
+@media(max-width:600px){.rbo-location-map-canvas.leaflet-container .leaflet-control-attribution{text-align:left}}
+/* Visible key appears only when a map includes approximate sites. */
+.rbo-map-position-key{display:flex;align-items:center;gap:9px;margin:9px 0 0;
+  color:#d9e6ed;font-size:.86rem;line-height:1.4}
+.rbo-approximate-key-glyph{display:inline-grid;place-items:center;flex:none;
+  width:25px;height:25px;border:2px dashed #fff0ad;border-radius:50%;
+  background:#142f41;color:#ffe39a;font-weight:800;font-size:16px}
+/* Only approximate positions use a gold dashed circle and ≈, not the blue pin. */
+.rbo-location-map-canvas .rbo-approximate-marker,.rbo-map-preview-canvas .rbo-approximate-marker{
+  box-sizing:border-box;display:grid;place-items:center;width:36px;height:36px;
+  border:3px dashed #fff0ad;border-radius:50%;background:rgba(20,47,65,.94);
+  color:#ffe39a;font-size:22px;font-weight:800;line-height:1;
+  box-shadow:0 0 0 2px #152e41,0 2px 9px #0009
+}
+.rbo-location-map-canvas .rbo-approximate-marker:focus-visible{
+  outline:3px solid #fff;outline-offset:4px
+}
+.rbo-location-map-list{gap:.7rem;margin:1rem 0}
+.rbo-location-map-list button{display:flex;align-items:center;gap:.7rem;width:min(100%,420px);background:#15364d;color:#f6fafb;border:1px solid #53728a;border-radius:11px;padding:.85rem 1rem;font-weight:650;box-shadow:0 3px 10px #0002}
+.rbo-location-map .rbo-site-dot{display:inline-block;width:13px;height:13px;border-radius:50%;background:#f5c967;border:2px solid #fff2c6;flex:none}
+.rbo-location-map .rbo-site-chevron{margin-left:auto;color:#f5c967;font-size:1.3rem;line-height:1}
+.rbo-location-map-list button[aria-expanded=true] .rbo-site-chevron{transform:rotate(180deg)}
+.rbo-location-map-detail{background:#15364d;color:#f1f7f8;border:1px solid #55768b;border-left:3px solid var(--gold);border-radius:10px;padding:1.1rem 1.2rem}
+.rbo-location-map-detail h3{color:#fff}
+.rbo-location-map-detail a{color:#f5c967}
+@media(max-width:600px){.rbo-map-page{padding-top:1.1rem}.rbo-map-page .rbo-guide-intro{margin-bottom:1rem}.rbo-location-map-canvas{height:58vh;min-height:380px}.rbo-location-map-list{display:block}.rbo-location-map-list button{width:100%}.rbo-location-map-detail{margin-top:.6rem}}
 
 
 /* Source-layer controls and compact color key on the Darrow map. */
@@ -517,6 +516,7 @@ footer a{color:var(--gold);text-underline-offset:3px}
   height:0;border-top:4px dashed var(--rbo-line-color);
   margin:0 6px 3px 0
 }
+.rbo-trail-legend .rbo-research-line-swatch{border-top-style:solid}
 @media(max-width:550px){
   .rbo-research-legend ul{columns:1}
 }
@@ -525,3 +525,74 @@ footer a{color:var(--gold);text-underline-offset:3px}
 .rbo-research-way-list summary{font-weight:600;font-size:.88rem}
 .rbo-research-way-list ul{columns:2}
 @media(max-width:550px){.rbo-research-way-list ul{columns:1}}
+
+/* Private trip-planning card. The content appears only in an explicitly selected
+   staging draft; these styles are inert for normal published articles. */
+.rbo-trip-status-card{
+  margin:1.5rem 0 2rem;padding:clamp(1.1rem,3.5vw,2rem);
+  border:1px solid rgba(238,206,122,.42);border-radius:14px;
+  background:linear-gradient(155deg,#0e1d3d,#0b1535 60%,#111a3a);
+  box-shadow:0 10px 28px #0002;
+}
+.rbo-trip-status-top{display:flex;flex-wrap:wrap;align-items:center;gap:.7rem;
+  justify-content:space-between;margin-bottom:.8rem}
+.rbo-trip-status-kicker{text-transform:uppercase;letter-spacing:.13em;
+  color:var(--gold);font-size:.76rem;font-weight:800}
+.rbo-trip-status-label{display:inline-block;border:1px solid rgba(238,206,122,.48);
+  border-radius:99px;padding:.25rem .65rem;color:var(--text);font-size:.79rem;font-weight:700}
+.rbo-trip-status-card h2{font-size:clamp(1.5rem,4vw,2rem);margin:0 0 .7rem}
+.rbo-trip-status-card .rbo-trip-status-lead{color:var(--muted);margin:0 0 1.35rem}
+.rbo-trip-facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:.7rem;margin:0}
+.rbo-trip-facts>div{background:#111f42;border:1px solid var(--stroke);
+  border-radius:8px;padding:.8rem .95rem;min-width:0}
+.rbo-trip-facts dt{color:var(--gold);font-size:.73rem;letter-spacing:.08em;
+  text-transform:uppercase;font-weight:800;margin-bottom:.2rem}
+.rbo-trip-facts dd{margin:0;font-size:1.02rem;line-height:1.35}
+.rbo-trip-facts dd small{display:block;color:var(--muted);font-size:.78rem;margin-top:.2rem}
+.rbo-trip-status-card h3{font-size:1.15rem;margin:1.5rem 0 .7rem}
+.rbo-trip-open-items{margin:.1rem 0 1.3rem;padding-left:1.25rem}
+.rbo-trip-open-items li{margin:.4rem 0;color:var(--muted);font-size:.96rem}
+.rbo-trip-open-items strong{color:var(--text)}
+.rbo-trip-status-card .rbo-trip-status-note{border-top:1px solid var(--stroke);
+  padding-top:1rem;margin:1.2rem 0 0;color:var(--muted);font-size:.84rem}
+.rbo-map-research-banner{padding:.7rem 1rem;border:1px solid var(--stroke);
+  border-radius:9px;background:var(--surface-light);color:var(--gold);font-size:.93rem}
+@media(max-width:610px){.rbo-trip-facts{grid-template-columns:1fr}
+  .rbo-trip-status-card{padding:1.15rem}}
+
+
+/* Salt Rock read-only planning status snapshot; edited from canonical issue #194. */
+.rbo-trip-progress-summary{display:flex;gap:.5rem;flex-wrap:wrap;margin:0 0 1rem}
+.rbo-trip-progress-summary span{padding:.3rem .65rem;border:1px solid var(--stroke);
+  background:#111f42;color:var(--text);border-radius:6px;font-size:.8rem;font-weight:650}
+.rbo-trip-track{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.85rem}
+.rbo-trip-status-group{background:#111f42;border:1px solid var(--stroke);border-radius:10px;
+  padding:.85rem 1rem;min-width:0}
+.rbo-trip-status-card .rbo-trip-status-group h3{margin:.05rem 0 .65rem;font-size:1.06rem}
+.rbo-trip-status-group--done h3{color:#b3e0c6}
+.rbo-trip-status-group--open h3{color:var(--gold)}
+.rbo-trip-status-items{list-style:none;padding:0;margin:0}
+.rbo-trip-status-card .rbo-trip-status-items li{display:flex;gap:.6rem;align-items:flex-start;
+  color:var(--text);font-size:.91rem;line-height:1.42;margin:.55rem 0}
+.rbo-trip-status-items li>span{flex:none;font-size:1.05rem;line-height:1.3;
+  color:var(--gold);font-weight:700}
+.rbo-trip-status-group--done .rbo-trip-status-items li>span{color:#b3e0c6}
+.rbo-trip-next-check{margin-top:.9rem;border-left:3px solid var(--gold);
+  border-radius:0 8px 8px 0;background:#111f42;padding:.7rem .9rem;
+  color:var(--muted);font-size:.91rem}
+.rbo-trip-next-check strong{color:var(--text)}
+.rbo-trip-status-card .rbo-trip-status-note{font-size:.8rem}
+@media(max-width:720px){.rbo-trip-track{grid-template-columns:1fr}}
+
+
+/* Knot visual reference is used only in the selected unpublished Salt Rock draft. */
+.rbo-knot-reference{margin:1.5rem 0 2rem}
+.rbo-knot-reference>h2{margin-bottom:.4rem}
+.rbo-knot-reference-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;margin:1rem 0}
+.rbo-knot-reference-grid figure{margin:0;padding:.7rem;min-width:0;border:1px solid var(--stroke);border-radius:12px;background:#101f3e}
+.rbo-knot-reference-grid svg{display:block;width:100%;height:auto;border-radius:8px}
+.rbo-knot-reference-grid figcaption{margin:.65rem .1rem .35rem;color:var(--text);font-size:.89rem;line-height:1.4}
+.rbo-knot-reference-grid a{font-size:.82rem;color:var(--gold);overflow-wrap:anywhere}
+.rbo-knot-caution{font-size:.85rem;color:var(--muted)}
+@media(max-width:760px){.rbo-knot-reference-grid{grid-template-columns:1fr}}
