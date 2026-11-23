@@ -630,3 +630,29 @@ footer a{color:var(--gold);text-underline-offset:3px}
     grid-template-columns:repeat(2,minmax(0,1fr));overflow:visible;scroll-snap-type:none}
   .rbo-map-scene{break-inside:avoid}
 }
+
+
+/* Modular Events pages: public-safe, mobile-first, no registration backend. */
+.rbo-events,.rbo-event-detail{max-width:1080px}
+.rbo-events>h1,.rbo-event-detail>h1{line-height:1.12;margin:.35rem 0 .8rem}
+.rbo-events>p,.rbo-event-detail>.lead{max-width:72ch}
+.rbo-event-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.1rem;margin:1.4rem 0 2rem}
+.rbo-event-card{min-width:0;border:1px solid var(--stroke);border-radius:13px;background:#111f3e;padding:1.35rem}
+.rbo-event-card h2{font-size:1.35rem;line-height:1.28;margin:0 0 .7rem}
+.rbo-event-card h2 a{color:var(--text)}
+.rbo-event-card p{line-height:1.55}
+.rbo-event-card a:not(.button){overflow-wrap:anywhere}
+.rbo-event-meta{color:var(--muted);font-size:.9rem}
+.rbo-event-actions{display:flex;flex-wrap:wrap;gap:.75rem;margin:1.4rem 0 .8rem}
+.rbo-event-secondary{background:transparent!important;border:1px solid var(--gold)!important;color:var(--gold)!important}
+.rbo-event-note{font-size:.93rem;color:var(--muted);line-height:1.55;max-width:78ch}
+.rbo-event-agenda,.rbo-event-updates{padding-left:1.25rem}
+.rbo-event-agenda li,.rbo-event-updates li{margin:0 0 1rem;line-height:1.55}
+.rbo-event-agenda p,.rbo-event-updates p{margin:.2rem 0}
+.rbo-event-detail .rbo-event-card ul{padding-left:1.25rem}
+.rbo-event-card strong{color:var(--text)}
+@media(max-width:740px){
+  .rbo-event-grid{grid-template-columns:1fr;gap:.85rem}
+  .rbo-event-card{padding:1.1rem}
+  .rbo-event-actions .button{width:100%;text-align:center}
+}
