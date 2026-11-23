@@ -656,3 +656,10 @@ footer a{color:var(--gold);text-underline-offset:3px}
   .rbo-event-card{padding:1.1rem}
   .rbo-event-actions .button{width:100%;text-align:center}
 }
+
+
+/* Licensed winter card photographs; attribution stays visible and readable. */
+.rbo-event-photo{margin:0 0 1.2rem}
+.rbo-event-photo img{display:block;width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;object-position:center 45%;border-radius:9px}
+.rbo-event-photo figcaption{margin-top:.45rem;color:var(--muted);font-size:.72rem;line-height:1.55;overflow-wrap:anywhere}
+.rbo-event-photo figcaption a{color:var(--gold)}
